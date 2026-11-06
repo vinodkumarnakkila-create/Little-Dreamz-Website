@@ -22,6 +22,7 @@ window.LITTLE_DREAMZ_DATA = {
   "announcement": {
     "enabled": true,
     "text": "🎉 FREE Kids Joy Camp · 13 & 14 November · Register by 12 November",
+    "expiresAt": "2026-11-14",
     "linkText": "See event",
     "link": "#events"
   },

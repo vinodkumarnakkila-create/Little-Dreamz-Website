@@ -33,7 +33,7 @@ function renderSite(model){
   byId('contactPhone').href='tel:+91'+phone.replace(/^91/,'');byId('callButton').href=byId('contactPhone').href;
   const mapURL=school.mapsUrl||'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(school.address||'Little Dreamz Preschool Meerpet Hyderabad');
   if(/^https:\/\//i.test(mapURL))byId('mapsButton').href=mapURL;
-  const banner=byId('siteAnnouncement');banner.replaceChildren(); banner.hidden=!(announcement.enabled && announcement.text);
+  const banner=byId('siteAnnouncement');banner.replaceChildren(); banner.hidden=!(announcement.enabled && announcement.text && (!announcement.expiresAt || announcement.expiresAt>=todayISO()));
   if(!banner.hidden){const span=document.createElement('span');span.textContent=announcement.text;banner.append(span);
     if(announcement.linkText){const link=document.createElement('a');link.href=['#events','#admissions','#contact','#moments'].includes(announcement.link)?announcement.link:'#events';link.textContent=announcement.linkText+' →';banner.append(link);}}
   const gallerySection=byId('moments'),galleryContainer=byId('galleryGrid');galleryContainer.replaceChildren();
@@ -57,9 +57,9 @@ function renderSite(model){
   const active=events.find(registerable),panel=byId('camp-register'),forms=byId('admissions').querySelector('.forms-grid');
   panel.hidden=!active;forms.classList.toggle('single-form',!active);selectedEvent=null;
   if(active)setupEventForm(active);
-  const ld={"@context":"https://schema.org","@type":"Preschool","name":"Little Dreamz Preschool","telephone":"+91"+phone.replace(/^91/,''),"address":{"@type":"PostalAddress","streetAddress":school.address||'Road No. 15, Meerpet',"addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"500097","addressCountry":"IN"},"description":"Nursery, LKG and UKG preschool in Meerpet, Hyderabad."};
+  const ld={"@context":"https://schema.org","@type":"Preschool","@id":"https://littledreamz.co.in/#school","name":"Little Dreamz Preschool","url":"https://littledreamz.co.in/","telephone":"+91"+phone.replace(/^91/,''),"address":{"@type":"PostalAddress","streetAddress":"No. 3-176/3/1/3/A/1, Road No. 15, Meerpet","addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"500097","addressCountry":"IN"},"description":"Nursery, LKG and UKG preschool in Meerpet, Hyderabad."};
   byId('schoolJsonLd').textContent=JSON.stringify(ld);
-  const desc=document.querySelector('meta[name="description"]');if(desc)desc.content='Little Dreamz Preschool in Meerpet, Hyderabad — Nursery, LKG & UKG. '+(hero.description||'Enquire about admissions and events.').slice(0,100);
+  // Keep the SEO meta description authored in index.html stable across editor updates.
 }
 function openWhatsapp(message){
  const raw=(SITE.school?.whatsapp||'').replace(/\D/g,'');if(!raw){alert('Please call the school to enquire.');return;}

@@ -1,0 +1,33 @@
+
+/* Search-friendly standalone programme pages: consistent with the Little Dreamz homepage */
+.seo-page{background:#fffaf5; color:#273448;min-height:100vh}
+.seo-nav{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:22px 0}
+.seo-nav a{color:#26344b;text-decoration:none;font-weight:750}
+.seo-brand{font-size:1.25rem;font-weight:900}
+.seo-brand span{color:#fa5f8b}
+.seo-navlinks{display:flex;gap:20px;flex-wrap:wrap}
+.seo-hero{padding:76px 0 56px;background:linear-gradient(135deg,#fcf2ff,#fffaf5 52%,#e5f8f1)}
+.seo-kicker{font-size:.86rem;color:#7c49d8;font-weight:850;letter-spacing:.11em;text-transform:uppercase}
+.seo-hero h1{font-size:clamp(2.6rem,5vw,4.9rem);line-height:1.1;max-width:890px;margin:14px 0 24px;letter-spacing:-.04em;color:#26344b}
+.seo-hero h1 em{font-style:normal;color:#fa6088}
+.seo-lead{font-size:1.16rem;line-height:1.7;max-width:770px;color:#58677b}
+.seo-cta{display:flex;gap:13px;flex-wrap:wrap;margin-top:28px}
+.seo-button{display:inline-block;padding:14px 24px;background:#8150dd;color:white!important;text-decoration:none;border-radius:35px;font-weight:800;box-shadow:0 5px 0 #e3d5fb}
+.seo-button.ghost{background:transparent;box-shadow:none;color:#8150dd!important;border:2px solid #8150dd}
+.seo-content{padding:64px 0 80px;max-width:1120px}
+.seo-two-col{display:grid;grid-template-columns:1.6fr 1fr;gap:38px}
+.seo-content h2{font-size:clamp(1.7rem,3vw,2.5rem);line-height:1.2;margin:0 0 16px}
+.seo-content h3{font-size:1.17rem;margin:26px 0 10px}
+.seo-content p,.seo-content li{line-height:1.75;color:#56667a}
+.seo-content ul{padding-left:24px}
+.seo-card{background:white;border:1px solid #e8dfff;border-radius:24px;padding:30px;box-shadow:0 12px 32px rgba(92,61,138,.06);align-self:start}
+.seo-card h2{font-size:1.45rem}
+.seo-faq{background:#f7f0ff;border-radius:26px;padding:36px;margin-top:44px}
+.seo-faq h2{margin-bottom:25px}
+.seo-faq h3{margin-top:18px}
+.seo-faq p{margin-top:5px}
+.seo-footer{background:#322c4e;color:white;padding:32px 0}
+.seo-footer p,.seo-footer a{color:#eee7ff}
+.seo-breadcrumb{font-size:.92rem;color:#55647b}
+.seo-breadcrumb a{color:#7546cc}
+@media(max-width:700px){.seo-two-col{grid-template-columns:1fr}.seo-hero{padding:46px 0}.seo-content{padding:38px 0}.seo-navlinks{gap:12px}}
