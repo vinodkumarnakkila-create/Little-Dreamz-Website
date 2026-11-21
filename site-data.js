@@ -20,10 +20,10 @@ window.LITTLE_DREAMZ_DATA = {
     "ukg": "Building early skills and confidence as children prepare for their next step."
   },
   "announcement": {
-    "enabled": true,
-    "text": "🎉 FREE Kids Joy Camp · 14 & 15 November · Register by 13 November",
-    "expiresAt": "2026-11-15",
-    "linkText": "See event",
+    "enabled": false,
+    "text": "",
+    "expiresAt": "",
+    "linkText": "",
     "link": "#events"
   },
   "gallery": {
@@ -50,23 +50,5 @@ window.LITTLE_DREAMZ_DATA = {
       }
     ]
   },
-  "events": [
-    {
-      "id": "joy-camp-2026",
-      "title": "Little Dreamz Kids Joy Camp",
-      "summary": "Two days of simple indoor games, laughter and happy memories for children aged 3–6. Children must be accompanied by a parent or guardian.",
-      "start": "2026-11-14",
-      "end": "2026-11-15",
-      "registrationDeadline": "2026-11-13",
-      "price": "FREE",
-      "icon": "🎈",
-      "status": "upcoming",
-      "registrationOpen": true,
-      "registrationDays": [
-        "14 November",
-        "15 November",
-        "Both days"
-      ]
-    }
-  ]
+  "events": []
 };
